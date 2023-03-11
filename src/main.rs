@@ -89,10 +89,10 @@ fn main() {
     lapin.config.mouse_mod = &[MODKEY];
     lapin.config.mouse_raises_window = false;
 
-    lapin.config.border_color = 0xff282a36;
-    lapin.config.border_color_focus = 0xffff79c6;
+    lapin.config.border_color = 0xff000000;
+    lapin.config.border_color_focus = 0xff00bb00;
     lapin.config.border_width = 4;
-    lapin.config.reserved_space = (60, 30, 30, 30);
+    lapin.config.reserved_space = (30, 0, 0, 0);
 
     let tile = Tiling {
 	    name: "tile",
@@ -125,7 +125,7 @@ fn main() {
 	    Lapin::spawn("luabatmon");
 	    Lapin::spawn("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1");
 	    Lapin::spawn("unclutter --timeout --jitter --start-hidden");
-	    Lapin::spawn(&format!("feh --no-fehbg --bg-fill {home}/.config/wallpaper"));
+	    Lapin::spawn(&format!("feh --no-fehbg --bg-fill {home}/pics/wallpapers/share/cyberpunk/nord-3.png"));
     }};
 
     lapin.init(&mut keybinds, Some(&mut callback));
